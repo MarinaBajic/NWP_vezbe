@@ -5,9 +5,9 @@
 }
 
 .container {
-    background-color: #ccc;
-    padding: 10px;
-    height: 1000px;
+    background-color: #095138;
+    padding: 16px;
+    height: 1024px;
 
     display: flex;
 
@@ -40,11 +40,11 @@
 }
 
 .item {
-    background-color: #f1425d;
-    padding: 40px;
-    margin: 30px;
-    color: #fff;
-    font-size: 40px;
+    background-color: #d09d10;
+    padding: 36px;
+    margin: 28px;
+    color: #095138;
+    font-size: 36px;
 
     /* flex-grow: 1; */
     /* flex-grow: 10; */
