@@ -1,24 +1,24 @@
-# Setup Typescript
+# Setup TypeScript
 
-Follow the instruction below to setup nvm, npm and typescript compiler.
-We will use nvm to install node and npm. Because of this we will use this 
-setup not only for typescript, but also for any other projects later in the course.
+Follow the instructions below to setup **nvm** (Node Version Manager), **node**, **npm** (Node Package Manager) and **typescript compiler**.
 
-## Installing nvm
+**We will use nvm to install node and npm.**
 
-First we need to install nvm (Node Version Manager)
+This setup is not only for TypeScript, but also for any other projects later in the course.
+
+## Installing nvm (Linux)
 
 ### Run the nvm installer
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 # or
 
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 ```
 
-### Reload the shell configiration
+### Reload the shell configuration
 
 ```
 source ~/.bashrc
@@ -30,9 +30,23 @@ source ~/.bashrc
 nvm -v
 ```
 
+## Installing nvm (Windows)
+
+### Run the nvm installer
+
+Go to this [link](https://github.com/coreybutler/nvm-windows/releases) and download the latest (we are using 1.2.2) **nvm-setup.exe** installer (it can be found under Assets).
+
+Run the downloaded file.
+
+### Check nvm version
+
+```
+nvm -v
+```
+
 ## Installing node
 
-We will install version 22.17.0 of Node.
+We will install version **v22.17.0** of Node.
 
 ```
 nvm install 22.17.0
@@ -47,46 +61,45 @@ nvm use 22.17.0
 ### Check node version
 
 ```
-which node
+node -v
 ```
 
 ### Check npm version
 
 ```
-which npm
+npm -v
 ```
 
-## Installing typescript
+## Installing TypeScript
 
-First you need to install typescript globally in order to be able to
-compile typescript files to javascript.
+In order to be able to compile TypeScript files to JavaScript (so that we can run JavaScript files), we need to install TypeScript (globally). 
 ```
 npm install -g typescript
 ```
 
-### Check typescript version
+### Check TypeScript version
 
 ``` 
 tsc -v
 ```
 
-### Setup typescript project
+### Setup TypeScript project
 
 ```
 tsc --init
 ```
-This will create a tsconfig.json file in the current directory. It is not necessary to run this command, but it is a good idea to have a tsconfig.json file in your project.
+This will create a *tsconfig.json* file in the current directory. It is not necessary to run this command, but it is a good idea to have a tsconfig.json file in your project.
 
-### Compile typescript file
+### Compile TypeScript file
 
 ```
 tsc path/to/file.ts
 ```
-This should generate a javascript file with the same name as the typescript file in the same directory.
+This will generate a JavaScript file with the same name as the TypeScript file in the same directory.
 
-### Run javascript file
+### Run JavaScript file
 
-We can use node to run the javascript file.
+We can use **node** to run the JavaScript file.
 
 ``` 
 node path/to/file.js
@@ -94,18 +107,14 @@ node path/to/file.js
 
 ### Install ts-node
 
-ts-node is a typescript interpreter. It will compile and run typescript files without having to compile them to javascript first.
+**ts-node** is a TypeScript interpreter. It will compile and run TypeScript files, so that we don't have to compile them to JavaScript first.
 
 ```
 npm install -g ts-node
 ```
 
-### Run typescript file
+### Run TypeScript file
 
 ```
 ts-node path/to/file.ts
 ```
-
-
-
-
