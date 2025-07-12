@@ -4,7 +4,7 @@ You can find the implementation of the tasks in the directory `vezbe5/ecommerce`
 
 Setup instructions for installing and running Angular can be found in the file `vezbe4/angular_setup.md`.
 
-In this exercise we will upgrade the e-commerce website that can be found in `vezbe4/ecommerce` and demonstrate the use of **control flow** (@if, @for), **directives** (ngClass, ngStyle), **input** and **output** of components and content (view) projection.
+In this exercise we will upgrade the e-commerce website that can be found in `vezbe4/ecommerce` and demonstrate the use of **control flow** (@if, @for), **directives** (ngClass, ngStyle), **input** and **output** of components and **content (view) projection**.
 
 ### E-commerce Website
 
