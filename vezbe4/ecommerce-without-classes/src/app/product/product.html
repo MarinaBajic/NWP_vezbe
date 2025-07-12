@@ -1,7 +1,7 @@
-<div class="product" [class]="{'on-sale': isOnSale}">
+<div class="product" [class.on-sale]="isOnSale">
     <img [src]="imageUrl" [alt]="name">
     <h2>{{name}}</h2>
-    <p>${{price}}</p>
+    <p>{{price | currency: 'USD'}}</p>
     <div class="btns">
         <button (click)="decreaseQuantity()" [disabled]="!canDecreaseQuantity()">-</button>
         <span>{{quantityInCart}}</span>

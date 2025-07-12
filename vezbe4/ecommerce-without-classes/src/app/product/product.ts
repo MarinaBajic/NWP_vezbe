@@ -1,8 +1,9 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './product.html',
   styleUrl: './product.css'
 })
@@ -10,7 +11,7 @@ export class Product implements OnInit {
   name!: string;
   price!: number;
   imageUrl!: string;
-  isOnSale: boolean = false;
+  isOnSale: boolean = true;
   quantityInCart: number = 0;
 
   ngOnInit(): void {

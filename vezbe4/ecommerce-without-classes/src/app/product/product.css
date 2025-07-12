@@ -1,17 +1,16 @@
-.on-sale {
-    background-color: rgb(219, 122, 122);
-}
-
-/* Extra styling */
 .product {
     background-color: #eee;
-    border: 1px solid #eee;
     padding: 16px;
     margin: 16px;
     border-radius: 8px;
     text-align: center;
 }
 
+.on-sale {
+    background-color: rgb(219, 122, 122);
+}
+
+/* Extra styling */
 .product img {
     width: 100%;
     max-width: 400px;
