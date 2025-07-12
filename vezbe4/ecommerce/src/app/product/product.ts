@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductModel } from '../model/product';
 
 @Component({
   selector: 'app-product',
@@ -7,27 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './product.css'
 })
 export class Product implements OnInit {
-  name!: string;
-  price!: number;
-  imageUrl!: string;
-  isOnSale: boolean = false;
-  quantityInCart: number = 0;
+  product!: ProductModel;
 
   ngOnInit(): void {
-    this.name = 'Sample Product';
-    this.price = 29.99;
-    this.imageUrl = 'https://mobileimages.lowes.com/productimages/28dd81a1-fb48-4551-8fd3-484ddf52d3b3/63457645.jpg'; // Placeholder image URL
+    this.product = new ProductModel(
+      'Sample Product',
+      29.99,
+      'https://mobileimages.lowes.com/productimages/28dd81a1-fb48-4551-8fd3-484ddf52d3b3/63457645.jpg',
+      false
+    );
   }
 
   increaseQuantity(): void {
-    this.quantityInCart++;
+    this.product.quantityInCart++;
   }
 
   decreaseQuantity(): void {
-    this.quantityInCart--;
+    this.product.quantityInCart--;
   }
 
   canDecreaseQuantity(): boolean {
-    return this.quantityInCart > 0;
+    return this.product.quantityInCart > 0;
   }
 }

@@ -4,11 +4,11 @@ You can find the implementation of the tasks in the directory `vezbe4/ecommerce`
 
 Setup instructions for installing and running Angular can be found in the file `vezbe4/angular_setup.md`.
 
-In this exercise we will implement a simple ecommerce application and demonstrate the use of **components**, **data binding** (text interpolation and property binding), **event binding** and **pipes**.
+In this exercise we will implement a simple e-commerce application and demonstrate the use of **components**, **data binding** (text interpolation and property binding), **event binding** and **pipes**.
 
 ### Ecommerce Application
 
-We are going to build an ecommerce application following these steps:
+We are going to build an e-commerce application following these steps:
 
 1. Make a new project called `ecommerce`.
 2. Create a component to display a single product.
