@@ -16,6 +16,7 @@ Look at vezbe4 (the previous exercise) for problem statement. In this exercise w
 4. Move the increment/decrement logic from the *Product* component to the *ProductList* component. Use a product ID to find the product and change its quantity.
 5. Add **content (view) projection** to the *Product* component and pass a paragraph to it at the bootom of each product card that tells what position in array of products each product has.
 
+
 ### How to run this project?
 
 1. Clone this repository to your local machine.
