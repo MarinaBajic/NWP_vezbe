@@ -11,4 +11,11 @@
   color: #eee;
   text-align: center;
   font-size: 48px;
+  margin-bottom: 0;
+}
+
+.app-container h2 {
+  color: #ccc;
+  text-align: center;
+  font-size: 20px;
 }
