@@ -15,7 +15,7 @@ export class Product implements OnInit {
       'Sample Product',
       29.99,
       'https://mobileimages.lowes.com/productimages/28dd81a1-fb48-4551-8fd3-484ddf52d3b3/63457645.jpg',
-      false
+      true
     );
   }
 
