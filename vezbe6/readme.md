@@ -1,6 +1,6 @@
 ## Exercise 6 - Using Bootstrap with Angular, Template Driven Forms
 
-You can find the implementation of the tasks in the directory `vezbe6/ecommerce` and `vezbe6/template-driven-forms-example`.
+You can find the implementation of the tasks in directories `vezbe6/ecommerce` and `vezbe6/template-driven-forms-example`.
 
 Setup instructions for installing bootstrap in angular can be found in the file `vezbe6/setup_bootstrap.md`.
 
