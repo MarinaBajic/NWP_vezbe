@@ -20,9 +20,11 @@ In this project we will build a new project with a very simple template driven f
 
 - Create class `Product` with properties `name`, `imageUrl`, `price` and `type` (new, used or not used).
 
-- Create new component create-product with template containing form for creating new product. Form should contain inputs for all properties of the product class. Set name field to be required.
+- Create new component `create-product` with a template driven form for adding a new product. The form should contain inputs for all properties of the class `Product`. The name field should be required.
 
-- Add commit and reset buttons to the form. Commit button should be disabled if the checkbox for accepting terms is not checked. 
+- Add a checkbox for accepting terms.
+
+- Add submit and reset buttons to the form. Submit button should be disabled if the checkbox for accepting terms is not checked. 
 
 - Use ngModel directive to bind inputs to properties of the product class. Use 1-way and 2-way data binding. Product name should always be displayed in uppercase.
 
