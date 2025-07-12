@@ -1,0 +1,7 @@
+<div class="products">
+  @for (product of products; track product.id; let i = $index) {
+  <app-product [product]="product" (changeQuantity)="onChangeQuantity($event)">
+    <p>This is item number {{ i + 1 }}</p>
+  </app-product>
+  }
+</div>
