@@ -1,46 +1,51 @@
 .product {
-    background-color: #eee;
-    padding: 16px;
-    margin: 16px;
-    border-radius: 8px;
-    text-align: center;
+  height: 90%;
+  background-color: #eee;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .on-sale {
-    background-color: rgb(219, 122, 122);
+  background-color: rgb(219, 122, 122);
 }
 
 /* Extra styling */
-.product img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 4px;
+.product__image {
+  width: 400px;
+  height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.product h2 {
-    color: #333;
-    font-size: 24px;
+.product__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.product p {
-    font-size: 28px;
+.product h3 {
+  font-size: 32px;
 }
 
 .btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 .btns button {
-    padding: 8px 16px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .btns span {
-    font-size: 20px;
+  font-size: 20px;
 }

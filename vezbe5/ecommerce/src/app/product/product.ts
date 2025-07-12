@@ -1,34 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductModel } from '../model/product';
-import { CurrencyPipe } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
+import { ProductQuantityChange } from '../model/product-quantity-change';
 
 @Component({
-  selector: 'app-product',
-  imports: [CurrencyPipe],
-  templateUrl: './product.html',
-  styleUrl: './product.css'
+	selector: 'app-product',
+	imports: [CurrencyPipe, CommonModule],
+	templateUrl: './product.html',
+	styleUrl: './product.css'
 })
 export class Product implements OnInit {
-  product!: ProductModel;
 
-  ngOnInit(): void {
-    this.product = new ProductModel(
-      'Sample Product',
-      29.99,
-      'https://mobileimages.lowes.com/productimages/28dd81a1-fb48-4551-8fd3-484ddf52d3b3/63457645.jpg',
-      true
-    );
-  }
+	// Input decorator allows us to pass data from parent to child component
+	@Input() product!: ProductModel;
+	// Output decorator allows us to pass data from child to parent component
+	// EventEmitter is used to emit custom made events
+	// ProductQuantityChange is a custom made event (interface)
+	@Output() changeQuantity!: EventEmitter<ProductQuantityChange>;
 
-  increaseQuantity(): void {
-    this.product.quantityInCart++;
-  }
+	// Object to store classes for ngClass directive
+	productClasses!: { [key: string]: boolean }
+	// Object to store styles for ngStyle directive
+	productStyles!: { [key: string]: string }
 
-  decreaseQuantity(): void {
-    this.product.quantityInCart--;
-  }
+	constructor() {
+		// We must initialize EventEmitter in constructor
+		this.changeQuantity = new EventEmitter<ProductQuantityChange>();
+	};
 
-  canDecreaseQuantity(): boolean {
-    return this.product.quantityInCart > 0;
-  }
+	ngOnInit(): void {
+		// Initializing productClasses and productStyles objects
+		this.productClasses = {
+			'on-sale': this.product.isOnSale,
+		}
+		this.productStyles = {
+			'font-size': this.product.isOnSale ? "36px" : "28px"
+		}
+	}
+
+	// Instead of increasing quantity here, we emit an event and send necessary data to parent component
+	increaseQuantity() {
+		this.changeQuantity.emit({ product: this.product, amountChange: 1 });
+	}
+
+	// Instead of decreasing quantity here, we emit an event and send necessary data to parent component
+	decreaseQuantity() {
+		this.changeQuantity.emit({ product: this.product, amountChange: -1 });
+	}
 }
