@@ -14,7 +14,9 @@ Look at vezbe4 and vezbe5 (the previous exercise) for problem statement. This pr
 
 ### Template Driven Forms
 
-In this project we will build a very simple example of a template driven form to demonstrate the use of ngModel directive with 1-way and 2-way data binding.
+In this project we will build a new project with a very simple template driven form to demonstrate the use of **ngModel** directive with **1-way** and **2-way** **data binding**.
+
+- Create a new project.
 
 - Create class `Product` with properties `name`, `imageUrl`, `price` and `type` (new, used or not used).
 
