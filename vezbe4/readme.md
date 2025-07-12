@@ -4,15 +4,15 @@ You can find the implementation of the tasks in the directory `vezbe4/ecommerce`
 
 Setup instructions for installing and running Angular can be found in the file `vezbe4/angular_setup.md`.
 
-In this exercise we will implement a simple e-commerce application and demonstrate the use of **components**, **data binding** (text interpolation and property binding), **event binding** and **pipes**.
+In this exercise we will implement a simple e-commerce website and demonstrate the use of **components**, **data binding** (text interpolation and property binding), **event binding** and **pipes**.
 
-### Ecommerce Application
+### Ecommerce Website
 
-We are going to build an e-commerce application following these steps:
+We are going to build an e-commerce website following these steps:
 
 1. Make a new project called `ecommerce`.
 2. Create a component to display a single product.
-3. The product component should display a name, price, and image for the product.
+3. The product component should display a name, price (use a pipe for currency), and image for the product.
 You can initialize the component with some default values. Use any place‐holder image you want (the image should be stored as a url with a relative path to the image).
 4. Highlight the entire element in a different color if the product is on sale. Whether the product is on sale can be an attribute of the product itself.
 5. Add buttons to increase and decrease the quantity of the product in the cart. The quantity in the cart (this is related to product, so how much of each product is added to cart) should be visible in the UI. Disable the button for decrement if the quantity is already zero.
