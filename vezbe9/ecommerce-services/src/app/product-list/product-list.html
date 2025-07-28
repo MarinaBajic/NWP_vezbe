@@ -1,0 +1,8 @@
+<div class="products">
+  @for (product of products; track product.id) {
+  <app-product-component
+    [product]="product"
+    (changeQuantity)="onChangeQuantity($event)"
+  />
+  }
+</div>
