@@ -1,0 +1,14 @@
+.error {
+    color: red;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.create-product {
+    background-color: #eeeeee;
+    padding: 24px;
+    border-radius: 8px;
+    margin-block: 36px;
+}
