@@ -1,0 +1,37 @@
+header {
+  background-color: #333;
+}
+
+header ul {
+  margin-inline: auto;
+}
+
+header a {
+  color: #eee;
+}
+
+header a:hover,
+header a.active {
+  color: #ccc;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container h1 {
+  color: #eee;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 0;
+  margin-top: 24px;
+}
+
+.app-container h2 {
+  color: #ccc;
+  text-align: center;
+  font-size: 20px;
+}
