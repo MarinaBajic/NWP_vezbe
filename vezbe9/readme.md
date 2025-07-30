@@ -26,7 +26,7 @@ In this project we will extend the code from the previous project (ecommerce-ser
 Here we will modify prevouosly mentioned methods to use observables and subscribe to them from components that need to be notified when products are changed. We will also show different ways to create observables and how to use them.
 
 
-### How to run angular projects?
+### How to run this project?
 
 1. Clone this repository to your local machine.
 2. Make sure you have followed all of the instructions in `vezbe4/angular_setup.md` to setup nvm, npm, node and angular cli.
