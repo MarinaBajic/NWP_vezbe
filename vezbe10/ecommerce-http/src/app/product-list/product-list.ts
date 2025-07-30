@@ -23,7 +23,7 @@ export class ProductList implements OnInit {
 	onChangeQuantity(pc: ProductQuantityChange) {
 		this.productService.changeQuantity(pc.product.id, pc.amountChange).subscribe({
 			next: () => {
-				this.productService.reloadProducts();
+				this.productService.loadProducts();
 				console.log('Quantity changed!');
 			},
 			error: (msg: string) => {

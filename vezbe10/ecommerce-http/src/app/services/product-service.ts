@@ -11,7 +11,7 @@ export class ProductService {
 	private productList = signal<Product[]>([]);
 
 	constructor(private http: HttpClient) {
-		this.reloadProducts();
+		this.loadProducts();
 	}
 
 	loadProducts() {
@@ -31,21 +31,5 @@ export class ProductService {
 
 	addProduct(product: Product) {
 		return this.http.post<Product>("api/product", product);
-	}
-
-	// updateProductsList(products: Product[]) {
-	// 	this.productList.set(products);
-	// }
-
-	reloadProducts(): void {
-		// this.loadProducts().subscribe({
-		// 	next: (products: Product[]) => {
-		// 		this.updateProductsList(products);
-		// 	},
-		// 	complete: () => {
-		// 		console.log('Finished loading products in service!');
-		// 	}
-		// });
-		this.loadProducts();
 	}
 }

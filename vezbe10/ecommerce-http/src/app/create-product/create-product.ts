@@ -23,7 +23,7 @@ export class CreateProduct {
       console.log('Creating product', product);
       this.productService.addProduct(product).subscribe({
         next: () => {
-          this.productService.reloadProducts();
+          this.productService.loadProducts();
         }
       });
     }
