@@ -1,4 +1,4 @@
-# Napredno web programiranje
+# Advanced Web Programming - Napredno web programiranje
 
 ## Description
 This github repository contains the exercises for the course Advanced Web Programming at the Faculty of Sciences, UNS, Novi Sad.
